@@ -1,0 +1,87 @@
+<html>
+<meta charset="utf-8" />
+<link type="text/css" rel="stylesheet" href="./click.css" />
+<script type="text/javascript">
+    function fnValidateCountry() {
+        var cc = document.getElementById('inCCode');
+        var ccVal = cc.value;
+        //console.log(cc);
+        var reg = (new RegExp('^\\d+$')).test(ccVal);
+        //console.log(reg.test(cc));
+        if (!reg) {
+            cc.classList.add("wrongEntry");
+            cc.title="Please enter a valid country code";
+        }
+        else {
+            cc.classList.remove("wrongEntry");
+            cc.title="";
+        }
+        toggleButton();
+    }
+    function fnValidatePhone() {
+        var phone = document.getElementById('inPhno');
+        var phVal = phone.value;
+        phVal = phVal.replace(/\D/g, '');
+        //console.log(phVal);
+        phone.value = phVal;
+        var reg = (new RegExp('^\\d+$')).test(phVal);
+        //console.log(reg);
+        if (!reg) {
+            phone.classList.add("wrongEntry");
+            phone.title="Please enter a valid phone number";
+        }
+        else {
+            phone.classList.remove("wrongEntry");
+            phone.title="";
+        }
+        toggleButton();
+    }
+    function toggleButton() {
+        var cc = document.getElementById('inCCode');
+        var phone = document.getElementById('inPhno');
+        var btnClick = document.getElementById('btnClick');
+        if ((cc.classList.contains("wrongEntry")) || (phone.classList.contains("wrongEntry"))) {
+            btnClick.disabled = true;
+        }
+        else {
+            if ((cc.value != '') && (phone.value != '')) {
+                btnClick.disabled = false;
+            }
+        }
+    }
+    function btnClicked(){
+        var cc = document.getElementById('inCCode');
+        var phone = document.getElementById('inPhno');
+        var btnClick = document.getElementById('btnClick');
+        var msg = document.getElementById('inMsg');
+        var msgTxt=msg.value;
+        var openURL="https://wa.me/"+cc.value+phone.value;
+        if(msg.value!=''){
+
+            openURL+="?text="+encodeURIComponent(msgTxt);
+        }
+        window.open(openURL,"_blank").focus();
+    }
+</script>
+
+<body>
+    <div class="mainContent">
+        <h1>Click to Chat</h1>
+        <h3>Please enter the country code and mobile number</h3>
+        <div class="inputSection">
+            <span>+</span><input type="text" id="inCCode" required="required" placeholder="91" maxlength="3" autofocus
+                tabindex="1" oninvalid="this.setCustomValidity('Please enter a valid country code')"
+                onblur="fnValidateCountry()"></input>
+            <input type="text" id="inPhno" required="required" placeholder="9876543210" maxlength="15" tabindex="2"
+                oninvalid="this.setCustomValidity('Please enter a valid phone number')"
+                onblur="fnValidatePhone()"></input>
+            <br />
+            <input type="text" id="inMsg" placeholder="Your message here" tabindex="3"></input>
+        </div>
+        <div>
+            <button id="btnClick" disabled="true" onclick="btnClicked()" tabindex="4">Open in WhatsApp</button>
+        </div>
+    </div>
+</body>
+
+</html>

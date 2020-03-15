@@ -1,0 +1,59 @@
+.mainContent{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    color: darkslategray;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkslategray;
+}
+
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkslategray;
+}
+input{
+    border-color:rgb(189, 189, 189) rgb(189, 189, 189) rgb(189, 189, 189) rgb(189, 189, 189);
+    border-radius:6px;
+    border-width: 1px 1px 1px 1px;  
+    background: transparent none repeat scroll 0% 0%; 
+}
+input#inCCode{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40px;
+    padding: 5px;
+    margin-left:5px;
+    margin-right: 5px;
+    border-color:rgb(189, 189, 189) rgb(189, 189, 189) rgb(189, 189, 189) rgb(0, 145, 255);
+    border-width: 1px 1px 1px 4px;
+}
+
+input#inPhno{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 170px;
+    padding: 5px;
+    border-color:rgb(189, 189, 189) rgb(189, 189, 189) rgb(189, 189, 189) rgb(0, 145, 255);
+    border-width: 1px 1px 1px 4px;
+}
+
+input#inMsg{
+    margin-top:10px;
+    margin-left:10px;
+    height:50px;
+    width:220px;
+}
+
+button#btnClick{
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 6px;
+    background: rgba(0, 145, 255, 0.4) none repeat scroll 0% 0%;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.wrongEntry{
+    background: rgba(255, 94, 57, 0.15) none repeat scroll 0% 0%;
+}
