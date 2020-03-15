@@ -2,12 +2,12 @@
   "name": "Click to Chat",
   "short_name": "Click to Chat",
   "display": "minimal-ui",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "theme_color": "#673ab6",
   "background_color": "#111111",
   "icons": [
     {
-      "src": "/wa-icon.png",
+      "src": "wa-icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
