@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8" title="Click to Chat on WhatsApp" />
-<meta name="description" content="Click to chat on WhatsApp. One click chatting without saving contact in phone."
+<meta name="description" content="Click to chat on WhatsApp. One click chatting without saving contact in phone." />
 <meta name="viewport" content="width=device-width, user-scalable=yes" />
 <meta name="theme-color" content="#673ab6" />
 <link rel="manifest" href="manifest.json" />
-<link rel="apple-touch-icon" href="/wa-icon.png">
-<link type="text/css" rel="stylesheet" href="./click.css" />
+<link rel="apple-touch-icon" href="wa-icon.png">
+<link type="text/css" rel="stylesheet" href="click.css" />
 <script type="text/javascript">
     function fnValidateCountry() {
         var cc = document.getElementById('inCCode');
@@ -73,7 +73,7 @@
     function registerServiceWorker() {
         // register sw script in supporting browsers
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js', { scope: '/' }).then(() => {
+            navigator.serviceWorker.register('service-worker.js', { scope: '/' }).then(() => {
                 console.log('Service Worker registered successfully.');
             }).catch(error => {
                 console.log('Service Worker registration failed:', error);

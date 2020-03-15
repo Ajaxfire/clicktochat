@@ -11,10 +11,10 @@ self.addEventListener('install', function(e) {
       caches.open('site-cache').then(function(cache) {
         return cache.addAll([
             '/',
-            '/index.html',
-            '/click.css',
-            '/manifest.json',
-            '/wa-icon.png'
+            'index.html',
+            'click.css',
+            'manifest.json',
+            'wa-icon.png'
         ])
       })
     );
