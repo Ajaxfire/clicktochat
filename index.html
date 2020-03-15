@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <title>Click to Chat on WhatsApp</title>
@@ -85,16 +86,17 @@
         }
     </script>
 </head>
+
 <body>
     <div class="mainContent">
         <h1>Click to Chat</h1>
         <h3>Please enter the country code and mobile number</h3>
         <div class="inputSection">
-            <span>+</span><input type="text" id="inCCode" required="required" placeholder="91"
-                maxlength="3" autofocus oninvalid="this.setCustomValidity('Please enter a valid country code')"
+            <span>+</span><input type="text" id="inCCode" required="required" placeholder="91" maxlength="3" autofocus
+                oninvalid="this.setCustomValidity('Please enter a valid country code')"
                 onblur="fnValidateCountry()"></input>
-            <input type="text" id="inPhno" required="required" placeholder="9876543210"
-                maxlength="15" oninvalid="this.setCustomValidity('Please enter a valid phone number')"
+            <input type="text" id="inPhno" required="required" placeholder="9876543210" maxlength="15"
+                oninvalid="this.setCustomValidity('Please enter a valid phone number')"
                 onblur="fnValidatePhone()"></input>
             <br />
             <input type="text" label="Message" id="inMsg" placeholder="Your message here"></input>
@@ -103,9 +105,11 @@
             <button id="btnClick" disabled="true" onclick="btnClicked()">Open in WhatsApp</button>
         </div>
     </div>
-    <label for="inCCode">Country code</label>
-    <label for="inPhno">Phone number</label>
-    <label for="inMsg">Message</label>
+    <div class="hidden">
+        <label for="inCCode">Country code</label>
+        <label for="inPhno">Phone number</label>
+        <label for="inMsg">Message</label>
+    </div>
     <script type="text/javascript">registerServiceWorker();</script>
 </body>
 
