@@ -13,8 +13,8 @@ self.addEventListener('install', function(e) {
             '/',
             '/index.html',
             '/click.css',
-            'manifest.json',
-            'wa-icon.png'
+            '/manifest.json',
+            '/wa-icon.png'
         ])
       })
     );

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, user-scalable=no" />
-<meta name="theme-color" content="#673ab6"/>
+<meta charset="utf-8" title="Click to Chat on WhatsApp" />
+<meta name="description" content="Click to chat on WhatsApp. One click chatting without saving contact in phone."
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<meta name="theme-color" content="#673ab6" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="/wa-icon.png">
 <link type="text/css" rel="stylesheet" href="./click.css" />
@@ -15,11 +16,11 @@
         //console.log(reg.test(cc));
         if (!reg) {
             cc.classList.add("wrongEntry");
-            cc.title="Please enter a valid country code";
+            cc.title = "Please enter a valid country code";
         }
         else {
             cc.classList.remove("wrongEntry");
-            cc.title="";
+            cc.title = "";
         }
         toggleButton();
     }
@@ -33,11 +34,11 @@
         //console.log(reg);
         if (!reg) {
             phone.classList.add("wrongEntry");
-            phone.title="Please enter a valid phone number";
+            phone.title = "Please enter a valid phone number";
         }
         else {
             phone.classList.remove("wrongEntry");
-            phone.title="";
+            phone.title = "";
         }
         toggleButton();
     }
@@ -54,31 +55,31 @@
             }
         }
     }
-    function btnClicked(){
+    function btnClicked() {
         var cc = document.getElementById('inCCode');
         var phone = document.getElementById('inPhno');
         var btnClick = document.getElementById('btnClick');
         var msg = document.getElementById('inMsg');
-        var msgTxt=msg.value;
-        var openURL="https://wa.me/"+cc.value+phone.value;
-        if(msg.value!=''){
+        var msgTxt = msg.value;
+        var openURL = "https://wa.me/" + cc.value + phone.value;
+        if (msg.value != '') {
 
-            openURL+="?text="+encodeURIComponent(msgTxt);
+            openURL += "?text=" + encodeURIComponent(msgTxt);
         }
-        window.open(openURL,"_blank").focus();
+        window.open(openURL, "_blank").focus();
     }
 </script>
 <script type="text/javascript">
-function registerServiceWorker() {
-  // register sw script in supporting browsers
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js', { scope: '/' }).then(() => {
-      console.log('Service Worker registered successfully.');
-    }).catch(error => {
-      console.log('Service Worker registration failed:', error);
-    });
-  }
-}
+    function registerServiceWorker() {
+        // register sw script in supporting browsers
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js', { scope: '/' }).then(() => {
+                console.log('Service Worker registered successfully.');
+            }).catch(error => {
+                console.log('Service Worker registration failed:', error);
+            });
+        }
+    }
 </script>
 
 <body>
@@ -86,19 +87,20 @@ function registerServiceWorker() {
         <h1>Click to Chat</h1>
         <h3>Please enter the country code and mobile number</h3>
         <div class="inputSection">
-            <span>+</span><input type="text" id="inCCode" required="required" placeholder="91" maxlength="3" autofocus
-                tabindex="1" oninvalid="this.setCustomValidity('Please enter a valid country code')"
+            <span>+</span><input label="Country code" type="text" id="inCCode" required="required" placeholder="91"
+                maxlength="3" autofocus oninvalid="this.setCustomValidity('Please enter a valid country code')"
                 onblur="fnValidateCountry()"></input>
-            <input type="text" id="inPhno" required="required" placeholder="9876543210" maxlength="15" tabindex="2"
-                oninvalid="this.setCustomValidity('Please enter a valid phone number')"
+            <input type="text" label="Phone number" id="inPhno" required="required" placeholder="9876543210"
+                maxlength="15" oninvalid="this.setCustomValidity('Please enter a valid phone number')"
                 onblur="fnValidatePhone()"></input>
             <br />
-            <input type="text" id="inMsg" placeholder="Your message here" tabindex="3"></input>
+            <input type="text" label="Message" id="inMsg" placeholder="Your message here"></input>
         </div>
         <div>
-            <button id="btnClick" disabled="true" onclick="btnClicked()" tabindex="4">Open in WhatsApp</button>
+            <button id="btnClick" disabled="true" onclick="btnClicked()">Open in WhatsApp</button>
         </div>
     </div>
+    <script type="text/javascript">registerServiceWorker();</script>
 </body>
 
 </html>
