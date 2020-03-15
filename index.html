@@ -1,5 +1,7 @@
 <html>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<link rel="manifest" href="manifest.json" />
 <link type="text/css" rel="stylesheet" href="./click.css" />
 <script type="text/javascript">
     function fnValidateCountry() {
@@ -62,6 +64,18 @@
         }
         window.open(openURL,"_blank").focus();
     }
+</script>
+<script type="text/javascript">
+function registerServiceWorker() {
+  // register sw script in supporting browsers
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js', { scope: '/' }).then(() => {
+      console.log('Service Worker registered successfully.');
+    }).catch(error => {
+      console.log('Service Worker registration failed:', error);
+    });
+  }
+}
 </script>
 
 <body>
