@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <title>Click to Chat on WhatsApp</title>
     <meta name="description" content="Click to chat on WhatsApp. One click chatting without saving contact in phone." />
     <meta name="viewport" content="width=device-width, user-scalable=yes" />
-    <link rel="shortcut icon" type="image/png" href="wa-icon.png" />
     <meta name="theme-color" content="#673ab6" />
-    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" type="image/png" href="wa-icon.png" />
     <link rel="apple-touch-icon" href="wa-icon.png">
+    <link rel="manifest" href="manifest.json" />
     <link type="text/css" rel="stylesheet" href="click.css" />
     <script type="text/javascript">
         function fnValidateCountry() {
@@ -86,13 +85,12 @@
         }
     </script>
 </head>
-
 <body>
     <div class="mainContent">
         <h1>Click to Chat</h1>
         <h3>Please enter the country code and mobile number</h3>
         <div class="inputSection">
-            <span>+</span><input type="text" id="inCCode" required="required" placeholder="91" maxlength="3" autofocus
+            <span>+</span><input type="text" id="inCCode" required="required" placeholder="91" maxlength="6" autofocus
                 oninvalid="this.setCustomValidity('Please enter a valid country code')"
                 onblur="fnValidateCountry()"></input>
             <input type="text" id="inPhno" required="required" placeholder="9876543210" maxlength="15"
@@ -104,6 +102,7 @@
         <div>
             <button id="btnClick" disabled="true" onclick="btnClicked()">Open in WhatsApp</button>
         </div>
+        <div class="subscript">Source Code available here: <a href="https://github.com/Ajaxfire/clicktochat/" target="_blank">GitHub - Ajaxfire - Click to Chat</a></div>
     </div>
     <div class="hidden">
         <label for="inCCode">Country code</label>
@@ -112,5 +111,4 @@
     </div>
     <script type="text/javascript">registerServiceWorker();</script>
 </body>
-
 </html>
