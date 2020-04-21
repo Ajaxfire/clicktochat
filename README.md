@@ -6,4 +6,4 @@ Use this link:
 <h1>https://ajaxfire.github.io/clicktochat/</h1>
 
 To fund this project, please click here: 
-<h3>https://rzp.io/l/clicktochat</h3>
+<h3><a target="_blank">https://rzp.io/l/clicktochat</a></h3>
