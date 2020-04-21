@@ -14,7 +14,7 @@ h3{
 }
 input{
     border-color:rgb(189, 189, 189) rgb(189, 189, 189) rgb(189, 189, 189) rgb(189, 189, 189);
-    border-radius:6px;
+    border-radius:5px;
     padding: 5px;
     border-width: 1px 1px 1px 1px;  
     background: transparent none repeat scroll 0% 0%; 
@@ -44,26 +44,14 @@ input#inMsg{
 
 button#btnClick{
     padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;	
     margin-top: 10px;
     margin-left: 10px;
-    border-radius: 6px;
+    border-radius: 3px;
     background: rgba(0, 145, 255, 0.4) none repeat scroll 0% 0%;
-     box-sizing: border-box;
-      position: relative;
-      display: block;
-      min-height: 38px;
-     line-height: 18px;
-      font-weight: 600;
-      font-size: 14px;
-      font-family: Lato, Muli, -apple-system, BlinkMacSystemFont, Arial,
-        sans-serif;
-      word-break: break-word;
-      border-radius: 5px;
-      text-align: center;
-      color: #fff;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-      z-index: 2;
-      text-decoration: none;
+    font-weight:bold;
+    box-sizing: border-box;
+    font-size:14px;
 }
 
 .wrongEntry{
