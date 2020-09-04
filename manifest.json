@@ -9,7 +9,8 @@
     {
       "src": "wa-icon.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
