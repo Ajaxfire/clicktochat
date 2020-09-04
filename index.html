@@ -88,18 +88,16 @@
 <body>
     <div class="mainContent">
         <h1>Click to Chat</h1>
-        <h3>Please enter the country code and mobile number</h3>
+        <div class="head">Please enter the country code and mobile number</div>
         <div class="inputSection">
-            <span>+</span><input type="text" id="inCCode" required="required" value="91" maxlength="6" autofocus
+            <span>+</span><input type="text" label="Country Code" id="inCCode" required="required" value="91" maxlength="6" autofocus
                 oninvalid="this.setCustomValidity('Please enter a valid country code')"
                 onblur="fnValidateCountry()"></input>
-            <input type="text" id="inPhno" required="required" placeholder="9876543210" maxlength="15"
+            <input label="Phone number" type="text" id="inPhno" required="required" placeholder="9876543210" maxlength="15"
                 oninvalid="this.setCustomValidity('Please enter a valid phone number')"
                 onblur="fnValidatePhone()"></input>
             <br />
             <input type="text" label="Message" id="inMsg" placeholder="Your message here"></input>
-        </div>
-        <div>
             <button id="btnClick" disabled="true" onclick="btnClicked()">Open in WhatsApp</button>
         </div>
         <div class="subscript">Source Code available here: <a rel="noopener" href="https://github.com/Ajaxfire/clicktochat/" target="_blank">GitHub - Ajaxfire - Click to Chat</a></div>
