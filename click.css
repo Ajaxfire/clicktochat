@@ -41,14 +41,14 @@ input#inPhno{
 
 input#inMsg{
     margin-top:10px;
-    margin-left:10px;
+    margin-left:13px;
     height:50px;
-    width:90%;
+    width:82%;
 }
 
 button#btnClick{
     padding: 10px;
-    width:90%;
+    width:88%;
     font-family: Lato, Muli, -apple-system, BlinkMacSystemFont, Arial, sans-serif;	
     margin-top: 10px;
     margin-left: 10px;
@@ -68,5 +68,6 @@ button#btnClick{
 .subscript{
     margin-top: 20px;
     font-size: small;
-    margin-left: 10px;
+    width: 100%;
+    text-align: center;
 }
